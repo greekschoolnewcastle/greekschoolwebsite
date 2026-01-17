@@ -167,3 +167,34 @@ h4 {
 .link-primary:hover {
   text-decoration: underline;
 }
+
+/* Language switching - show/hide content based on html[data-lang] */
+[data-lang="en"] .lang-el,
+[data-lang="el"] .lang-en {
+  display: none !important;
+}
+
+[data-lang="en"] .lang-en,
+[data-lang="el"] .lang-el {
+  display: initial;
+}
+
+/* For block elements that need to remain block */
+[data-lang="en"] h1.lang-en,
+[data-lang="en"] h2.lang-en,
+[data-lang="en"] h3.lang-en,
+[data-lang="en"] h4.lang-en,
+[data-lang="en"] p.lang-en,
+[data-lang="en"] div.lang-en,
+[data-lang="en"] li.lang-en,
+[data-lang="en"] section.lang-en,
+[data-lang="el"] h1.lang-el,
+[data-lang="el"] h2.lang-el,
+[data-lang="el"] h3.lang-el,
+[data-lang="el"] h4.lang-el,
+[data-lang="el"] p.lang-el,
+[data-lang="el"] div.lang-el,
+[data-lang="el"] li.lang-el,
+[data-lang="el"] section.lang-el {
+  display: block;
+}

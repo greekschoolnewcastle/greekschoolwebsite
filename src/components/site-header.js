@@ -8,9 +8,10 @@ class SiteHeader extends HTMLElement {
           <div class="flex items-center justify-between py-4">
             <!-- Logo/School Name -->
             <div class="flex items-center space-x-3">
-              <div class="text-xl md:text-2xl font-heading font-bold">
-                Greek Community School of Newcastle
-              </div>
+              <a href="index.html" class="text-xl md:text-2xl font-heading font-bold hover:text-accent transition-colors">
+                <span class="lang-en">Greek Community School of Newcastle</span>
+                <span class="lang-el">Ελληνικό Σχολείο Νιούκαστλ</span>
+              </a>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -28,8 +29,13 @@ class SiteHeader extends HTMLElement {
             <div class="hidden md:flex items-center space-x-6">
               ${this.renderNavLinks(currentPage)}
               <div class="border-l border-white/30 pl-6">
-                <button class="text-sm hover:text-accent transition-colors" title="Language switcher (coming soon)">
-                  EN
+                <button
+                  data-lang-toggle
+                  onclick="window.langUtils?.toggleLanguage()"
+                  class="text-sm hover:text-accent transition-colors font-semibold"
+                  title="Switch language"
+                >
+                  EL
                 </button>
               </div>
             </div>
@@ -39,6 +45,14 @@ class SiteHeader extends HTMLElement {
           <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-white/20 mt-4 pt-4">
             <div class="flex flex-col space-y-3">
               ${this.renderNavLinks(currentPage, true)}
+              <button
+                data-lang-toggle
+                onclick="window.langUtils?.toggleLanguage()"
+                class="py-2 text-base text-left hover:text-accent transition-colors font-semibold"
+                title="Switch language"
+              >
+                EL
+              </button>
             </div>
           </div>
         </nav>
@@ -56,12 +70,12 @@ class SiteHeader extends HTMLElement {
 
   renderNavLinks(currentPage, isMobile = false) {
     const links = [
-      { href: 'index.html', label: 'Home' },
-      { href: 'about.html', label: 'About' },
-      { href: 'admissions.html', label: 'Admissions' },
-      { href: 'gallery.html', label: 'Gallery' },
-      { href: 'get-involved.html', label: 'Get Involved' },
-      { href: 'contact.html', label: 'Contact' },
+      { href: 'index.html', labelEn: 'Home', labelEl: 'Αρχική' },
+      { href: 'about.html', labelEn: 'About', labelEl: 'Σχετικά' },
+      { href: 'admissions.html', labelEn: 'Admissions', labelEl: 'Εγγραφές' },
+      { href: 'gallery.html', labelEn: 'Gallery', labelEl: 'Συλλογή' },
+      { href: 'get-involved.html', labelEn: 'Get Involved', labelEl: 'Συμμετοχή' },
+      { href: 'contact.html', labelEn: 'Contact', labelEl: 'Επικοινωνία' },
     ];
 
     return links.map(link => {
@@ -69,7 +83,10 @@ class SiteHeader extends HTMLElement {
       const activeClass = isActive ? 'text-accent font-semibold' : 'hover:text-accent';
       const baseClass = isMobile ? 'py-2 text-base' : 'text-sm';
 
-      return `<a href="${link.href}" class="${baseClass} ${activeClass} transition-colors">${link.label}</a>`;
+      return `<a href="${link.href}" class="${baseClass} ${activeClass} transition-colors">
+        <span class="lang-en">${link.labelEn}</span>
+        <span class="lang-el">${link.labelEl}</span>
+      </a>`;
     }).join('');
   }
 }
