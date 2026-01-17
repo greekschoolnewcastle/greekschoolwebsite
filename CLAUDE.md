@@ -4,7 +4,7 @@
 
 Static website for the Greek Community School of Newcastle - a community school teaching Greek language and culture to children and adults in Newcastle upon Tyne, UK.
 
-See [README.md](README.md) for:
+See @README.md for:
 - Key information (contact details, location)
 - Tech stack
 - Project structure
@@ -12,18 +12,23 @@ See [README.md](README.md) for:
 
 ## Design System
 
-See [src/styles/DESIGN-SYSTEM.md](src/styles/DESIGN-SYSTEM.md) for:
+See @src/styles/DESIGN-SYSTEM.md for:
 - Theme colors and fonts (CSS variables)
 - Utility CSS classes (buttons, layout, cards)
-- Web components
+
+## Web Components
+
+See @src/components/WEB-COMPONENTS.md for:
+- Component list
+- Implementation details
+- Usage examples
 
 ## Conventions
 
 - Use semantic HTML5 elements
 - Mobile-first responsive design
 - Keep components simple - this is a content site, not an app
-- Placeholder links use `#` until Google Form URLs are provided
-- English content first; Greek translations will be added later via i18n
+- Placeholder links use `#` 
 - Use theme CSS variables (e.g., `bg-primary`, `text-accent`) for consistent styling
 
 ## Notes

@@ -53,12 +53,4 @@
 | `.card` | Card with white background, rounded corners, and shadow |
 | `.link-primary` | Styled link with hover underline effect |
 
-## Web Components (Light DOM)
 
-All web components use light DOM (no Shadow DOM) so Tailwind classes work directly.
-
-| Component | File | Description |
-|-----------|------|-------------|
-| `<site-header>` | `components/site-header.js` | Main navigation header |
-| `<site-footer>` | `components/site-footer.js` | Site footer |
-| `<hero-section>` | `components/hero-section.js` | Hero section component |
