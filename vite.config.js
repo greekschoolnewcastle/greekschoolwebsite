@@ -3,15 +3,17 @@ import { resolve } from 'path';
 
 export default defineConfig({
   base: '/greekschoolwebsite/',
+  root: 'src',
   build: {
+    outDir: '../dist',
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        about: resolve(__dirname, 'about.html'),
-        admissions: resolve(__dirname, 'admissions.html'),
-        gallery: resolve(__dirname, 'gallery.html'),
-        getInvolved: resolve(__dirname, 'get-involved.html'),
-        contact: resolve(__dirname, 'contact.html'),
+        main: resolve(__dirname, 'src/index.html'),
+        about: resolve(__dirname, 'src/about.html'),
+        admissions: resolve(__dirname, 'src/admissions.html'),
+        gallery: resolve(__dirname, 'src/gallery.html'),
+        getInvolved: resolve(__dirname, 'src/get-involved.html'),
+        contact: resolve(__dirname, 'src/contact.html'),
       },
     },
   },

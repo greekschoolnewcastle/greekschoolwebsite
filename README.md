@@ -25,14 +25,14 @@ Static website for the Greek Community School of Newcastle - a community school 
 ├── src/
 │   ├── components/      # Web components (site-header.js, site-footer.js, hero-section.js)
 │   ├── styles/          # CSS with Tailwind v4 theme (main.css, DESIGN-SYSTEM.md)
-│   └── js/              # Shared utilities (main.js)
-├── index.html           # Home page
-├── about.html           # About page
-├── admissions.html      # Admissions page
-├── gallery.html         # Gallery page
-├── get-involved.html    # Get Involved page
-├── contact.html         # Contact page
-├── vite.config.js       # Vite configuration with multi-page setup
+│   ├── js/              # Shared utilities (main.js)
+│   ├── index.html       # Home page
+│   ├── about.html       # About page
+│   ├── admissions.html  # Admissions page
+│   ├── gallery.html     # Gallery page
+│   ├── get-involved.html # Get Involved page
+│   └── contact.html     # Contact page
+├── vite.config.js       # Vite configuration (root: src)
 └── postcss.config.js    # PostCSS with @tailwindcss/postcss
 ```
 
