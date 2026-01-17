@@ -30,9 +30,4 @@ See @src/components/WEB-COMPONENTS.md for:
 - Keep components simple - this is a content site, not an app
 - Placeholder links use `#` 
 - Use theme CSS variables (e.g., `bg-primary`, `text-accent`) for consistent styling
-
-## Notes
-
-- No images/logo yet - use placeholders
-- Registration forms link to external Google Forms (URLs TBD)
-- Bilingual support (EN/GR) planned - structure should accommodate language switching
+- Use the bilingual web component pattern for text that needs to be displayed in both languages

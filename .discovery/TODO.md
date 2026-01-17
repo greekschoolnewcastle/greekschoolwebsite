@@ -1,7 +1,7 @@
-- [] Greek translation
+- [check] Greek translation
 - [] School year details in drive link
 - [check] Registration forms
-- [] Policies
-- [] Palio logo sto website
-- []
+- [check] Policies
+- [check] Palio logo sto website
+
 
