@@ -13,7 +13,7 @@ class HeroSection extends HTMLElement {
     const image = this.getAttribute('image') || '';
 
     const bgClasses = {
-      'primary': 'bg-primary',
+      'primary': 'bg-gradient-primary',
       'primary-light': 'bg-primary-light',
       'primary-pale': 'bg-primary-pale',
       'gradient': 'bg-gradient-to-r from-primary to-primary-light'
@@ -21,34 +21,43 @@ class HeroSection extends HTMLElement {
 
     const textColor = background === 'primary-pale' ? 'text-primary' : 'text-white';
 
-    const imageStyle = image ? `background-image: linear-gradient(rgba(30, 58, 95, 0.85), rgba(30, 58, 95, 0.85)), url('${image}'); background-size: cover; background-position: center;` : '';
+    const imageStyle = image ? `background-image: linear-gradient(160deg, rgba(30, 58, 95, 0.92), rgba(74, 144, 184, 0.85)), url('${image}'); background-size: cover; background-position: center;` : '';
     const bgClass = image ? '' : (bgClasses[background] || bgClasses.primary);
 
-    // Render bilingual title if different
+    // Render bilingual title with animation
     const titleHtml = titleEn || titleEl ? `
-      <h1 class="mb-6">
+      <h1 class="mb-6 animate-fade-in-up">
         <span class="lang-en">${titleEn}</span>
         <span class="lang-el">${titleEl}</span>
       </h1>
     ` : '';
 
-    // Render bilingual subtitle if different
+    // Render bilingual subtitle with animation
     const subtitleHtml = subtitleEn || subtitleEl ? `
-      <p class="text-lg md:text-xl leading-relaxed opacity-90">
+      <p class="text-lg md:text-xl lg:text-2xl leading-relaxed opacity-90 animate-fade-in-up delay-200 max-w-3xl mx-auto">
         <span class="lang-en">${subtitleEn}</span>
         <span class="lang-el">${subtitleEl}</span>
       </p>
     ` : '';
 
     this.innerHTML = `
-      <section class="${bgClass} ${textColor}" style="${imageStyle}">
-        <div class="section-container py-16 md:py-24">
+      <section class="${bgClass} ${textColor} relative overflow-hidden" style="${imageStyle}">
+        <!-- Decorative corner accents -->
+        <div class="absolute top-6 left-6 w-16 h-16 border-l-2 border-t-2 border-accent opacity-40 hidden md:block"></div>
+        <div class="absolute top-6 right-6 w-16 h-16 border-r-2 border-t-2 border-accent opacity-40 hidden md:block"></div>
+
+        <div class="section-container py-20 md:py-28 lg:py-32 relative">
           <div class="max-w-4xl mx-auto text-center">
             ${titleHtml}
             ${subtitleHtml}
-            <slot></slot>
+            <div class="animate-fade-in-up delay-300">
+              <slot></slot>
+            </div>
           </div>
         </div>
+
+        <!-- Greek key pattern at bottom -->
+        <div class="greek-pattern opacity-60"></div>
       </section>
     `;
   }
