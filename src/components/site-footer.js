@@ -58,6 +58,10 @@ class SiteFooter extends HTMLElement {
                   <span class="lang-en">Policies</span>
                   <span class="lang-el">Πολιτικές</span>
                 </a></li>
+                <li><a href="https://drive.google.com/file/d/1Z3pHIa8ecVOTGsQX59jA4dUhroP6WbzM/view?usp=sharing" target="_blank" class="hover:text-accent transition-colors">
+                  <span class="lang-en">Constitution</span>
+                  <span class="lang-el">Καταστατικό</span>
+                </a></li>
               </ul>
             </div>
 
