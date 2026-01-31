@@ -62,6 +62,10 @@ class SiteFooter extends HTMLElement {
                   <span class="lang-en">Constitution</span>
                   <span class="lang-el">Καταστατικό</span>
                 </a></li>
+                <li><a href="contributors.html" class="hover:text-accent transition-colors">
+                  <span class="lang-en">Previous Contributors</span>
+                  <span class="lang-el">Προηγούμενοι Συνεισφέροντες</span>
+                </a></li>
               </ul>
             </div>
 
@@ -88,8 +92,8 @@ class SiteFooter extends HTMLElement {
                 </div>
                 <div class="text-sm">
                   <p class="font-semibold mb-2">
-                    <span class="lang-en">School Hours:</span>
-                    <span class="lang-el">Ώρες Λειτουργίας:</span>
+                    <span class="lang-en">In Person School Hours:</span>
+                    <span class="lang-el">Ώρες Λειτουργίας Δια Ζώσης:</span>
                   </p>
                   <p>
                     <span class="lang-en">Children: Sat (10am-4:30pm)</span>

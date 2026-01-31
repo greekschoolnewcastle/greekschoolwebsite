@@ -14,6 +14,7 @@ export default defineConfig({
         gallery: resolve(__dirname, 'src/gallery.html'),
         getInvolved: resolve(__dirname, 'src/get-involved.html'),
         contact: resolve(__dirname, 'src/contact.html'),
+        contributors: resolve(__dirname, 'src/contributors.html'),
       },
     },
   },
