@@ -62,10 +62,10 @@ class SiteFooter extends HTMLElement {
                   <span class="lang-en">Constitution</span>
                   <span class="lang-el">Καταστατικό</span>
                 </a></li>
-                <li><a href="contributors.html" class="hover:text-accent transition-colors">
+                <!-- <li><a href="contributors.html" class="hover:text-accent transition-colors">
                   <span class="lang-en">Previous Contributors</span>
                   <span class="lang-el">Προηγούμενοι Συνεισφέροντες</span>
-                </a></li>
+                </a></li> -->
               </ul>
             </div>
 
