@@ -1,8 +1,26 @@
+const SCHOOL_YEAR_INFO_URL = 'https://drive.google.com/drive/folders/1P9S_YrDzl6cRF0bFY3VjL5jqeMPv25bJ?usp=drive_link';
+
 class SiteHeader extends HTMLElement {
   connectedCallback() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
     this.innerHTML = `
+      <!-- School year announcement bar -->
+      <a
+        href="${SCHOOL_YEAR_INFO_URL}"
+        target="_blank"
+        rel="noopener"
+        class="block bg-accent text-primary text-sm font-semibold hover:bg-accent-light transition-colors duration-300"
+      >
+        <div class="section-container py-2 flex items-center justify-center gap-2 text-center">
+          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          <span class="lang-en">School year info: fees, term dates &amp; timetables</span>
+          <span class="lang-el">Πληροφορίες σχολικής χρονιάς: δίδακτρα, ημερομηνίες &amp; ωρολόγια προγράμματα</span>
+          <span aria-hidden="true">&rarr;</span>
+        </div>
+      </a>
       <header class="bg-gradient-to-r from-primary to-[color-mix(in_srgb,var(--color-primary)_85%,var(--color-primary-light))] text-white sticky top-0 z-50 shadow-lg backdrop-blur-sm">
         <nav class="section-container">
           <div class="flex items-center justify-between py-4">

@@ -100,12 +100,12 @@ class SiteFooter extends HTMLElement {
                     <span class="lang-el">Παιδιά: Σάβ (10πμ-4:30μμ)</span>
                   </p>
                   <p>
-                    <span class="lang-en">Adults: Wednesdays (in-person, 6-8pm)</span>
-                    <span class="lang-el">Ενήλικες: Τετάρτη (δια ζώσης, 6-8μμ)</span>
+                    <span class="lang-en">Adult Beginners: Tuesdays (online, 6-8pm)</span>
+                    <span class="lang-el">Ενήλικες Αρχάριοι: Τρίτη (διαδικτυακά, 6-8μμ)</span>
                   </p>
                   <p>
-                    <span class="lang-en">Adults: Mondays (online, 6-8pm)</span>
-                    <span class="lang-el">Ενήλικες: Δευτέρα (διαδικτυακά, 6-8μμ)</span>
+                    <span class="lang-en">Adult Intermediate &amp; Advanced: Wednesdays (in-person, 6-8pm)</span>
+                    <span class="lang-el">Ενήλικες Μεσαίοι &amp; Προχωρημένοι: Τετάρτη (δια ζώσης, 6-8μμ)</span>
                   </p>
                 </div>
               </div>
